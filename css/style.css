@@ -868,6 +868,9 @@ display: none;
         padding: 7px 40px;
         /* transition: 0.2s; */
     }
+    .header__list-pad {
+        top: 54px;
+    }
     .main-pad {
         margin-top: 143px;
     }
@@ -1320,7 +1323,7 @@ display: none;
 		z-index: 10;
 		top: 34%;
 		left: -15px;
-		display: none !;
+		display: none;
 		width: 61px;
 		height: 60px;
 		cursor: pointer;

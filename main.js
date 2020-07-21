@@ -76,11 +76,13 @@ $(
                 topPadding = 54;
             }
             window.onscroll = ()=>{if(window.scrollY > 28){
+                $(`.header__list`).addClass(`header__list-pad`)
                 $(`.header`).addClass(`header-pad`)
                 $(`.header__link`).addClass(`header__link-pad`)
                 
             }if((window.scrollY < 29)){
                 if (!($(`body`).hasClass(`lock`))){
+                    $(`.header__list`).removeClass(`header__list-pad`)
                 $(`.header`).removeClass(`header-pad`)
                 $(`.main`).removeClass(`main-pad`)
                 $(`.header__link`).removeClass(`header__link-pad`)}
