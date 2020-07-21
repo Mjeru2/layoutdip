@@ -246,7 +246,7 @@ display: none;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	overflow-y: scroll;
+	/* overflow-y: scroll; */
 }
 .header__link,
 .social__link {
