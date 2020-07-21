@@ -90,7 +90,8 @@ $(
 				if (document.body.clientWidth < 768) {
 					topPadding = 54;
 				}
-			});
+            });
+            
 			$(`.popup__input-phone`).mask("+7(000)000-00-00", {
 				placeholder: "+7(___)___-__-__",
 			});
