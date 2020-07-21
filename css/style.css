@@ -20,7 +20,6 @@ body {
 }
 
 img {
-	/* width: 100%; */
 	height: auto;
 }
 
@@ -46,15 +45,9 @@ p {
 }
 
 .visually-hidden {
-	/* position: absolute !important; */
-	/* overflow: hidden; */
 	clip: rect(1px 1px 1px 1px);
-	/* clip: rect(1px, 1px, 1px, 1px); */
-	/* width: 1px !important; */
-	/* height: 1px !important; */
 	padding: 0 !important;
 	border: 0 !important;
-	/* transition: all 0.3s; */
 }
 
 .clearfix::after {
@@ -71,7 +64,6 @@ p {
 }
 .lock {
 	overflow: hidden;
-	/* height: 100vh; */
 	position: fixed;
 	width: 100%;
 }
@@ -81,7 +73,6 @@ padding-top: 28px;
 }
 .header__container {
     display: flex;
-    /* margin-top: 28px; */
     justify-content: space-between;
     align-items: center;
 }
@@ -124,7 +115,6 @@ display: none;
     bottom: 0;
 }
 .burger-active span {
-    /* top: 9px; */
     transform: scale(0);
     transition: 0.2s;
 }
@@ -145,7 +135,6 @@ display: none;
 }
 .header__list {
 	flex-grow: 1;
-	/* opacity: 1 !important; */
 }
 .header__list-item {
 	position: relative;
@@ -200,12 +189,11 @@ display: none;
 	left: 0;
 	z-index: 21;
 	width: 100vw;
-	padding-top: 13vh;
 	height: 100%;
 	opacity: 0;
 	background-color: rgba(0, 0, 0, 0.2);
 	transition: opacity 0.3s;
-	overflow: auto;
+	overflow-y: scroll;
 }
 .callForm label {
 	font-size: 0;
@@ -245,19 +233,20 @@ display: none;
 }
 
 .popup__container {
-	margin: 0 auto;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	max-width: 500px;
 	width: 80%;
-	/* height: 100%; */
 	background-color: #fbfbfb;
 	z-index: 22;
-	position: relative;
-	/* opacity: 1; */
+	position: absolute;
 	padding: 20px 20px 40px 20px;
 	background-color: #fbfbfb;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	overflow-y: scroll;
 }
 .header__link,
 .social__link {
@@ -521,37 +510,24 @@ display: none;
 .examples__slider {
 	position: relative;
 
-	/* height: 350px; */
 
 	margin: 0 14px;
 }
-/* Слайдер */
 .slick-slider {
 	overflow: hidden;
 }
-/* Слайдер запущен */
 
-/* Слайдер с точками */
 
-/* Ограничивающая оболочка */
 
-/* Лента слайдов */
 .slick-track {
 	display: flex;
 }
-/* Слайд */
 
-/* Слайд активный (показывается) */
 
-/* Слайд основной */
 
-/* Слайд по центру */
 
-/* Клонированный слайд */
 
-/* Стрелка */
 
-/* Стрелка влево */
 .slider .slick-arrow.slick-prev {
 	position: absolute;
 	z-index: 10;
@@ -566,7 +542,6 @@ display: none;
 	background-image: url(../img/arrow.png);
 	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.07);
 }
-/* Стрелка вправо */
 .slider .slick-arrow.slick-next {
 	position: absolute;
 	top: 34%;
@@ -581,16 +556,12 @@ display: none;
 	background-image: url(../img/arrow.png);
 	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.07);
 }
-/* Стрелка не активная */
 
-/* Точки (булиты) */
 .slick-dots {
 	display: none;
 }
 
-/* Активная точка */
 
-/* Элемент точки */
 .slick-dots li button {
 	display: none;
 }
@@ -600,12 +571,10 @@ display: none;
 
 	width: 282px;
 
-	/* padding: 20px; */
 	margin: 0 9px;
 
 	outline: none;
 
-	/* margin-right: 25px; */
 
 	flex-shrink: 0;
 }
@@ -821,7 +790,6 @@ display: none;
 	}
 	.fixed-container {
 		max-width: 1024px;
-		/* position: fixed; */
 	}
     .burger-container {
         display: block;
@@ -843,13 +811,9 @@ display: none;
 	}
 	.header {
 	padding-top: 28px;
-	/* position: sticky; */
-	/* width: 100%; */
-	/* top: 0; */
 	padding-top: 28px;
 	position: fixed;
 	width: 100%;
-	/* padding-top: 0px; */
 	top: 0;
 	z-index: 21;
 	background-color: #fbfbfb;
@@ -866,7 +830,6 @@ display: none;
     }
     .header__link-pad {
         padding: 7px 40px;
-        /* transition: 0.2s; */
     }
     .header__list-pad {
         top: 54px;
@@ -881,7 +844,6 @@ display: none;
 	}
 	.header__list-item {
 		margin: 19px 20px;
-		/* flex-shrink: 1; */
 		flex-grow: 0;
 		font-size: 20px;
 		display: inline-block;
@@ -981,7 +943,6 @@ display: none;
 		background-image: url(../img/arrow.png);
 		box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.07);
 	}
-	/* Стрелка вправо */
 	.slider .slick-arrow.slick-next {
 		position: absolute;
 		top: 34%;
@@ -1015,19 +976,15 @@ display: none;
 		border-radius: 50%;
 		background-color: #ebebeb;
 	}
-	/* Активная точка */
 	.slick-dots li.slick-active {
 		background-color: #ff4e2e;
 	}
 	.examples__slider {
-		/* height: 400px; */
 	}
 	.slider__item {
-		/* height: 390px; */
 		width: 450px;
 		margin: 0;
 		padding: 0 18px;
-		/* margin-right: 10px; */
 	}
 	.slider__item img {
 		min-width: 100%;
@@ -1172,7 +1129,6 @@ display: none;
 	}
 	.header__list-item {
 		margin: 19px 20px;
-		/* flex-shrink: 1; */
 		font-size: 20px;
 		display: block;
 	}
@@ -1182,7 +1138,6 @@ display: none;
 		flex-direction: column;
 		position: absolute;
 		top: 43px;
-		/* left: -150px; */
 		background-color: #fbfbfb;
 		z-index: -1;
 		padding-bottom: 10px;
@@ -1333,7 +1288,6 @@ display: none;
 		background-image: url(../img/arrow.png);
 		box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.07);
 	}
-	/* Стрелка вправо */
 	.slider .slick-arrow.slick-next {
 		position: absolute;
 		top: 34%;
@@ -1353,10 +1307,8 @@ display: none;
 		background-image: url(../img/arrow.png);
 		box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.07);
 	}
-	/* Стрелка не активная */
 	.slick-arrow.slick-disabled {
 	}
-	/* Точки (булиты) */
 	.slick-dots {
 		display: flex;
 
@@ -1373,11 +1325,9 @@ display: none;
 		border-radius: 50%;
 		background-color: #ebebeb;
 	}
-	/* Активная точка */
 	.slick-dots li.slick-active {
 		background-color: #ff4e2e;
 	}
-	/* Элемент точки */
 	.slick-dots li button {
 		display: none;
 	}
@@ -1399,7 +1349,6 @@ display: none;
 	}
 
 	.slider__item img {
-		/* min-width: 80%; */
 		display: block;
 
 		margin: 0 auto;
@@ -1428,7 +1377,6 @@ display: none;
 		margin-bottom: 34px;
 	}
 	.star {
-		/* display: inline-block; */
 	}
 	.outro__description {
 		display: block;
@@ -1439,7 +1387,6 @@ display: none;
 	}
 	.outro__description-main {
 		font-size: 15px;
-		/* display: block; */
 
 		width: 90%;
 		padding-left: 0;

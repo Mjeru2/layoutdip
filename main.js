@@ -210,22 +210,26 @@ $(
 		});
 		$(`.header__link`).on(`click`, function (e) {
 			disableScroll()
-			$(`.popup`).removeClass(`visually-hidden`);
+            $(`.popup`).removeClass(`visually-hidden`);
+            document.getElementById("firstInput").focus();
 			$(`.popup`).animate({ opacity: 1 }, 200, `linear`);
 		});
 		$(`.social__link`).on(`click`, function (e) {
 			disableScroll();
-			$(`.popup`).removeClass(`visually-hidden`);
+            $(`.popup`).removeClass(`visually-hidden`);
+            document.getElementById("firstInput").focus();
 			$(`.popup`).animate({ opacity: 1 }, 200, `linear`);
 		});
 		$(`.exapmles_link`).on(`click`, function (e) {
 			disableScroll()
-			$(`.popup`).removeClass(`visually-hidden`);
+            $(`.popup`).removeClass(`visually-hidden`);
+            document.getElementById("firstInput").focus();
 			$(`.popup`).animate({ opacity: 1 }, 200, `linear`);
 		});
 		$(`.tel-icon`).on(`click`, function (e) {
 			disableScroll()
-			$(`.popup`).removeClass(`visually-hidden`);
+            $(`.popup`).removeClass(`visually-hidden`);
+            document.getElementById("firstInput").focus();
 			$(`.popup`).animate({ opacity: 1 }, 200, `linear`);
 		});
 		$(`.popup`).on(`click`, function (e) {
