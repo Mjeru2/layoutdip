@@ -346,11 +346,11 @@
 			<div class="popup visually-hidden">
 				<div class="popup__container">
 					<h2 class="popup__header">Заказать звонок</h2>
-					<form id="ajaxform" class="callForm" action="mail.php">
+					<form id="ajaxform" class="callForm" action="#" method="POST">
 						<label
 							>Имя
 							<input
-								name="Name"
+								name="name"
 								class="popup__input"
 								type="text"
 								placeholder="Имя"
@@ -360,9 +360,9 @@
 						<label
 							>Телефон
 							<input
-								name="Phone"
+								name="phone"
 								class="popup__input popup__input-phone"
-								type="text"
+								type="tel"
 								pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
 								placeholder="Телефон"
 								required
@@ -372,7 +372,7 @@
 						<label
 							>Почта
 							<input
-								name="Email"
+								name="email"
 								class="popup__input"
 								type="email"
 								placeholder="Email"

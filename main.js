@@ -20,7 +20,7 @@ $(
 		}
 		$(document).ready(function () {
 
-            $("#ajaxform").submit(function(){ // перехватываем все при событии отправки
+            $(".callForm").submit(function(){ // перехватываем все при событии отправки
                 var form = $(this); // запишем форму, чтобы потом не было проблем с this
                 var error = false; // предварительно ошибок нет
                 form.find('input, textarea').each( function(){ // пробежим по каждому полю в форме
@@ -43,7 +43,13 @@ $(
                                if (data['error']) { // если обработчик вернул ошибку
                                    alert(data['error']); // покажем её текст
                                } else { // если все прошло ок
-                                   alert('Письмо отвравлено! Чекайте почту! =)'); // пишем что все ок
+                                   alert('Письмо отвравлено!');
+                                   $(`.popup`).animate({ opacity: 0 }, 200, `linear`);
+				enableScroll();
+				window.setTimeout(() => {
+					$(`.popup`).addClass(`visually-hidden`);
+				}, 350);
+                                    // пишем что все ок
                                }
                          },
                        error: function (xhr, ajaxOptions, thrownError) { // в случае неудачного завершения запроса к серверу

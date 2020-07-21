@@ -2,10 +2,12 @@
 if ($_POST) { // если передан массив POST
 	$name = htmlspecialchars($_POST["name"]); // пишем данные в переменные и экранируем спецсимволы
 	$email = htmlspecialchars($_POST["email"]);
-	$subject = htmlspecialchars($_POST["subject"]);
-	$message = htmlspecialchars($_POST["message"]);
+    $phone = htmlspecialchars($_POST["phone"]);
+    $subject = "Новая заявка";
+    $message = "$name + $email + $phone";
+
 	$json = array(); // подготовим массив ответа
-	if (!$name or !$email or !$subject or !$message) { // если хоть одно поле оказалось пустым
+	if (!$name or !$email or !$phone) { // если хоть одно поле оказалось пустым
 		$json['error'] = 'Вы заполнили не все поля! Обмануть решили? =)'; // пишем ошибку в массив
 		echo json_encode($json); // выводим массив ответа 
 		die(); // умираем
@@ -30,7 +32,7 @@ if ($_POST) { // если передан массив POST
 	public $subject;
 	public $data_charset='UTF-8';
 	public $send_charset='windows-1251';
-	public $body='';
+	public $body='$name  $email  $phone';
 	public $type='text/plain';
 
 	function send(){
@@ -50,8 +52,8 @@ if ($_POST) { // если передан массив POST
 	}
 
 	$emailgo= new TEmail; // инициализируем супер класс отправки
-	$emailgo->from_email= 'dontforget.pro'; // от кого
-	$emailgo->from_name= 'Тестовая форма';
+	$emailgo->from_email= 'Mail.php'; // от кого
+	$emailgo->from_name= 'Заявка с сайта';
 	$emailgo->to_email= $email; // кому
 	$emailgo->to_name= $name;
 	$emailgo->subject= $subject; // тема
