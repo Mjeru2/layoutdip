@@ -89,9 +89,9 @@ $(
             }};
             
 			window.addEventListener(`resize`, () => {
-				if (document.body.clientWidth < 768) {
+				if (document.body.clientWidth < 1500) {
 					topPadding = 54;
-				}
+				}else topPadding = 0;
             });
             
 			$(`.popup__input-phone`).mask("+7(000)000-00-00", {
@@ -120,7 +120,8 @@ $(
 			});
 
 			$(".header__list-item").on("click", function (e) {
-				e.preventDefault();
+                e.preventDefault();
+                console.log(topPadding);
 				$("html,body").animate(
 					{
 						scrollTop:
